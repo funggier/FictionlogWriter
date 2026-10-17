@@ -230,7 +230,7 @@ export class BrowserLiveLayer {
 }
 
 export function registerBrowserLiveTools(server, config, layer = new BrowserLiveLayer({ config })) {
-  const browserSchema = z.enum(["firefox", "chrome"]);
+  const browserSchema = z.literal("firefox");
   const sessionSchema = z.string().min(1).max(128);
   const selectorFields = {
     name: z.string().max(1024).optional(),
