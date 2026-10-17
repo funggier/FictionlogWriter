@@ -3,7 +3,7 @@
 Focused MCP server for ChatGPT-assisted writing workflows on Fictionlog.
 
 - Current version: **0.1.0**
-- Release target: **v0.1.0 — Focused Fictionlog Browser Bridge**
+- Release: **[v0.1.0 — Focused Fictionlog Browser Bridge](https://github.com/funggier/FictionlogWriter/releases/tag/v0.1.0)**
 - Public MCP surface: **8 tools**
 
 ## Scope
