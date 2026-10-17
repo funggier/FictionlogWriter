@@ -1,6 +1,6 @@
 # FLW-001 — Tunnel Lifecycle & Conditional Read Cache
 
-**Status:** ACTIVE
+**Status:** COMPLETE / DEPLOYED / LIVE GREEN
 
 ## Goal
 
