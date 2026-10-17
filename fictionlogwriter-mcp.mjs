@@ -15,6 +15,7 @@ registerFirefoxAdapter(defaultBrowserCommonLayer);
 const restrictedLayer = new FictionlogBrowserLayer(defaultBrowserCommonLayer, {
   allowedHosts: config.fictionlog.allowedHosts,
   firefoxProfileRoot: config.fictionlog.firefoxProfileRoot,
+  geckodriverPath: config.fictionlog.geckodriverPath,
 });
 
 registerFictionlogTools(server, restrictedLayer);

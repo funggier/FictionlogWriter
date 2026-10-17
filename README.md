@@ -37,7 +37,7 @@ npm test
 npm start
 ```
 
-Firefox and a compatible `geckodriver` are required. The runtime can resolve geckodriver from its supported runtime path, environment configuration, or PATH.
+Firefox and a compatible `geckodriver` are required. The deployed runtime pins its driver path under `fictionlogwriter/runtime/browser-drivers/geckodriver.exe`, outside the tunnel client's generated `runtime/` directory, so a normal tunnel refresh does not remove the browser driver.
 
 ## Qualification baseline
 

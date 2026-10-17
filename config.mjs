@@ -14,5 +14,6 @@ export const config = Object.freeze({
   fictionlog: {
     allowedHosts: ["fictionlog.co", "www.fictionlog.co"],
     firefoxProfileRoot: path.join(root, "runtime", "firefox-profile"),
+    geckodriverPath: path.join(root, "runtime", "browser-drivers", "geckodriver.exe"),
   },
 });

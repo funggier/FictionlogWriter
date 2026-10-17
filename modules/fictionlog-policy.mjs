@@ -24,10 +24,12 @@ export class FictionlogBrowserLayer {
   constructor(inner, {
     allowedHosts = ["fictionlog.co", "www.fictionlog.co"],
     firefoxProfileRoot,
+    geckodriverPath,
   } = {}) {
     this.inner = inner;
     this.allowedHosts = allowedHosts;
     this.firefoxProfileRoot = firefoxProfileRoot;
+    this.geckodriverPath = geckodriverPath;
   }
 
   async start({ browser, url = "https://fictionlog.co/", headless = false, options = {} }) {
@@ -38,6 +40,7 @@ export class FictionlogBrowserLayer {
     const safeOptions = {
       ...options,
       profile_root: this.firefoxProfileRoot,
+      geckodriver_path: this.geckodriverPath,
       unsafe_allow_external_profile: true,
     };
     return this.inner.start({ browser, url: safeUrl, headless, options: safeOptions });

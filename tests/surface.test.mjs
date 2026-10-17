@@ -23,10 +23,11 @@ test("public MCP surface contains exactly eight focused browser tools", () => {
 test("managed start forces dedicated Firefox profile and Fictionlog URL", async () => {
   let received = null;
   const inner = { async start(args) { received = args; return { ok: true }; } };
-  const layer = new FictionlogBrowserLayer(inner, { firefoxProfileRoot: "X:/fictionlog-profile" });
+  const layer = new FictionlogBrowserLayer(inner, { firefoxProfileRoot: "X:/fictionlog-profile", geckodriverPath: "X:/fictionlog-driver/geckodriver.exe" });
   await layer.start({ browser: "firefox", url: "https://fictionlog.co/", options: {} });
   assert.equal(received.browser, "firefox");
   assert.equal(received.options.profile_root, "X:/fictionlog-profile");
+  assert.equal(received.options.geckodriver_path, "X:/fictionlog-driver/geckodriver.exe");
   assert.equal(received.options.unsafe_allow_external_profile, true);
 });
 
