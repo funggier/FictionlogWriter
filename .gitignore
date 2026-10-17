@@ -1,0 +1,9 @@
+node_modules/
+runtime/*
+!runtime/.gitkeep
+*.log
+.env
+local-secrets/
+mcp-conf.yaml
+mcp-conf.zip
+tunnel-client.exe
