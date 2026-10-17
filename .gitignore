@@ -1,6 +1,9 @@
 node_modules/
 runtime/*
 !runtime/.gitkeep
+fictionlogwriter-runtime/*
+!fictionlogwriter-runtime/.gitkeep
+logs/
 *.log
 .env
 local-secrets/

@@ -2,6 +2,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const root = path.dirname(fileURLToPath(import.meta.url));
+const persistentRuntime = path.join(root, "fictionlogwriter-runtime");
 
 export const config = Object.freeze({
   shell: {
@@ -12,8 +13,8 @@ export const config = Object.freeze({
     maxSynchronousRequestSeconds: 15,
   },
   fictionlog: {
-    allowedHosts: ["fictionlog.co", "www.fictionlog.co"],
-    firefoxProfileRoot: path.join(root, "runtime", "firefox-profile"),
-    geckodriverPath: path.join(root, "runtime", "browser-drivers", "geckodriver.exe"),
+    persistentRuntime,
+    firefoxProfileRoot: path.join(persistentRuntime, "firefox-profile"),
+    geckodriverPath: path.join(persistentRuntime, "browser-drivers", "geckodriver.exe"),
   },
 });
